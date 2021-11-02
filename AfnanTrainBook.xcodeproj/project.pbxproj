@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		A20C4903272EAD9400264979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C4902272EAD9400264979 /* AppDelegate.swift */; };
 		A20C4905272EAD9400264979 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C4904272EAD9400264979 /* SceneDelegate.swift */; };
-		A20C4907272EAD9400264979 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C4906272EAD9400264979 /* ViewController.swift */; };
+		A20C4907272EAD9400264979 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C4906272EAD9400264979 /* HomeViewController.swift */; };
 		A20C490A272EAD9400264979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20C4908272EAD9400264979 /* Main.storyboard */; };
 		A20C490C272EAD9700264979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20C490B272EAD9700264979 /* Assets.xcassets */; };
 		A20C490F272EAD9700264979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20C490D272EAD9700264979 /* LaunchScreen.storyboard */; };
+		A20C491A27307FA200264979 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C491927307FA200264979 /* Client.swift */; };
+		A20C491C2730824800264979 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C491B2730824800264979 /* Ticket.swift */; };
+		A20C49202730868300264979 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C491F2730868300264979 /* BookingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A20C48FF272EAD9400264979 /* AfnanTrainBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfnanTrainBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20C4902272EAD9400264979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A20C4904272EAD9400264979 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A20C4906272EAD9400264979 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A20C4906272EAD9400264979 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A20C4909272EAD9400264979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A20C490B272EAD9700264979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20C490E272EAD9700264979 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A20C4910272EAD9700264979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20C491927307FA200264979 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		A20C491B2730824800264979 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		A20C491F2730868300264979 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingViewController.swift; path = AfnanTrainBook/Controller/BookingViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		A20C4901272EAD9400264979 /* AfnanTrainBook */ = {
 			isa = PBXGroup;
 			children = (
+				A20C491E2730828D00264979 /* View */,
+				A20C491D2730827B00264979 /* Controller */,
+				A20C491627307EF900264979 /* Model */,
 				A20C4902272EAD9400264979 /* AppDelegate.swift */,
 				A20C4904272EAD9400264979 /* SceneDelegate.swift */,
-				A20C4906272EAD9400264979 /* ViewController.swift */,
-				A20C4908272EAD9400264979 /* Main.storyboard */,
 				A20C490B272EAD9700264979 /* Assets.xcassets */,
-				A20C490D272EAD9700264979 /* LaunchScreen.storyboard */,
 				A20C4910272EAD9700264979 /* Info.plist */,
 			);
 			path = AfnanTrainBook;
+			sourceTree = "<group>";
+		};
+		A20C491627307EF900264979 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A20C491927307FA200264979 /* Client.swift */,
+				A20C491B2730824800264979 /* Ticket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A20C491D2730827B00264979 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A20C4906272EAD9400264979 /* HomeViewController.swift */,
+				A20C491F2730868300264979 /* BookingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A20C491E2730828D00264979 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A20C4908272EAD9400264979 /* Main.storyboard */,
+				A20C490D272EAD9700264979 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20C4907272EAD9400264979 /* ViewController.swift in Sources */,
+				A20C4907272EAD9400264979 /* HomeViewController.swift in Sources */,
 				A20C4903272EAD9400264979 /* AppDelegate.swift in Sources */,
+				A20C491C2730824800264979 /* Ticket.swift in Sources */,
+				A20C491A27307FA200264979 /* Client.swift in Sources */,
+				A20C49202730868300264979 /* BookingViewController.swift in Sources */,
 				A20C4905272EAD9400264979 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
