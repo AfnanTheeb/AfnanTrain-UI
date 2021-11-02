@@ -16,6 +16,10 @@
 		A20C491A27307FA200264979 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C491927307FA200264979 /* Client.swift */; };
 		A20C491C2730824800264979 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C491B2730824800264979 /* Ticket.swift */; };
 		A20C49202730868300264979 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C491F2730868300264979 /* BookingViewController.swift */; };
+		A20C492227314A5E00264979 /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C492127314A5E00264979 /* MyTripsViewController.swift */; };
+		A20C492427314CCE00264979 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C492327314CCE00264979 /* RegisterViewController.swift */; };
+		A20C492A27315FA900264979 /* TicketCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C492927315FA900264979 /* TicketCellTableViewController.swift */; };
+		A20C492C2731607800264979 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C492B2731607800264979 /* TicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		A20C491927307FA200264979 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A20C491B2730824800264979 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		A20C491F2730868300264979 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookingViewController.swift; path = AfnanTrainBook/Controller/BookingViewController.swift; sourceTree = SOURCE_ROOT; };
+		A20C492127314A5E00264979 /* MyTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
+		A20C492327314CCE00264979 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A20C492927315FA900264979 /* TicketCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCellTableViewController.swift; sourceTree = "<group>"; };
+		A20C492B2731607800264979 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,10 @@
 			children = (
 				A20C4906272EAD9400264979 /* HomeViewController.swift */,
 				A20C491F2730868300264979 /* BookingViewController.swift */,
+				A20C492327314CCE00264979 /* RegisterViewController.swift */,
+				A20C492927315FA900264979 /* TicketCellTableViewController.swift */,
+				A20C492B2731607800264979 /* TicketViewController.swift */,
+				A20C492127314A5E00264979 /* MyTripsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,7 +186,11 @@
 				A20C4907272EAD9400264979 /* HomeViewController.swift in Sources */,
 				A20C4903272EAD9400264979 /* AppDelegate.swift in Sources */,
 				A20C491C2730824800264979 /* Ticket.swift in Sources */,
+				A20C492427314CCE00264979 /* RegisterViewController.swift in Sources */,
 				A20C491A27307FA200264979 /* Client.swift in Sources */,
+				A20C492A27315FA900264979 /* TicketCellTableViewController.swift in Sources */,
+				A20C492C2731607800264979 /* TicketViewController.swift in Sources */,
+				A20C492227314A5E00264979 /* MyTripsViewController.swift in Sources */,
 				A20C49202730868300264979 /* BookingViewController.swift in Sources */,
 				A20C4905272EAD9400264979 /* SceneDelegate.swift in Sources */,
 			);
