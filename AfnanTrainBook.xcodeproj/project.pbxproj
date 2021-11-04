@@ -44,6 +44,7 @@
 		A2EBB09E2731D5C7007EC24E /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		A2EBB0A027328B57007EC24E /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		A2EBB0A127328B57007EC24E /* TicketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketCell.xib; sourceTree = "<group>"; };
+		A2EBB0A42733773A007EC24E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		A20C48F6272EAD9400264979 = {
 			isa = PBXGroup;
 			children = (
+				A2EBB0A42733773A007EC24E /* README.md */,
 				A20C4901272EAD9400264979 /* AfnanTrainBook */,
 				A20C4900272EAD9400264979 /* Products */,
 			);
