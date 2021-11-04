@@ -37,6 +37,7 @@ class BookingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         ticket = issueTicketPrice(from: .Makkah, to: .Jeddah, ticketType: 0 )
         // Do any additional setup after loading the view.
     }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

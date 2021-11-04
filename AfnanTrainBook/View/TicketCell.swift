@@ -11,6 +11,18 @@ class TicketCell: UITableViewCell {
     
 
     @IBOutlet weak var title: UILabel!
+    
+    @IBOutlet weak var idLabel: UILabel!
+    
+    @IBOutlet weak var deceLabel: UILabel!
+    
+    
+    @IBOutlet weak var typeLabel: UILabel!
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

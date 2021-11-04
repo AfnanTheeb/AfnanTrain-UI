@@ -17,7 +17,7 @@ enum Station : String {
 //______________________________________________
 // Determining the booking class / business - economy
 enum BookingType : Int {
-    case Economey
+    case Economey = 0
     case Business
 }
 //______________________________________________

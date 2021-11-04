@@ -26,7 +26,11 @@ class TicketCellViewController: UIViewController, UITableViewDelegate , UITableV
         
         ticketCell.textLabel?.text = " \(clientProfile.tickets[indexPath.row].ticketID) + from :\(clientProfile.tickets[indexPath.row].startStation) TO \(clientProfile.tickets[indexPath.row].endStation)"
         let customCell = tableView.dequeueReusableCell(withIdentifier: "numCell", for: indexPath) as! TicketCell
-        return ticketCell
+        customCell.title.text = " \(clientProfile.firstName)  \(clientProfile.lastName)"
+        customCell.idLabel.text = clientProfile.tickets[indexPath.row].ticketID
+        customCell.deceLabel.text = "\(clientProfile.tickets[indexPath.row].startStation) -> \(clientProfile.tickets[indexPath.row].endStation)"
+        customCell.typeLabel.text = "\(clientProfile.tickets[indexPath.row].bookingType)"
+        return customCell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
