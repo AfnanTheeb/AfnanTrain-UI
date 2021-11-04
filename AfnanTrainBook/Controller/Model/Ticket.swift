@@ -24,11 +24,12 @@ enum BookingType : Int {
 // create struct for ticket consist information the ticket and calculate cost for it
 //
 
-struct Ticket {
+struct Ticket : Equatable {
     var startStation: Station
     var endStation: Station
     var cost: Float = 0
     var bookingType: BookingType
+    var status: String = "Confirmed"
     static var lastId = 0
     
     static func getNewID() -> String {
@@ -36,5 +37,4 @@ struct Ticket {
         return (String(lastId))
     }
     var ticketID : String = "AFNA-000\(getNewID())"
-    
 }

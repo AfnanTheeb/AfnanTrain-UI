@@ -8,6 +8,7 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    var reservation : Reservation!
     var ticket : Ticket!
     var client : Client!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -17,14 +18,32 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(ticket)
         // Do any additional setup after loading the view.
+        IDTextField.keyboardType = .numberPad
+        birthTextField.keyboardType = .numberPad
     }
     
 
     @IBAction func createClient(_ sender: Any) {
-        client = Client(firstName: firstNameTextField.text! , lastName: lastNameTextField.text! , birthYear: Int(birthTextField.text!)!, id: Int(IDTextField.text!)!)
-        client.tickets.append(ticket)
+        var findClientIndex = reservation.clients.firstIndex(where: {$0.id == Int(IDTextField.text!)})
+        if (findClientIndex != nil) {
+            reservation.clients[findClientIndex!].tickets.append(ticket)
+            
+            client = reservation.clients[findClientIndex!]
+        } else {
+            if (!firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty && !birthTextField.text!.isEmpty && !IDTextField.text!.isEmpty) {
+                client = Client(firstName: firstNameTextField.text! , lastName: lastNameTextField.text! , birthYear: Int(birthTextField.text!)!, id: Int(IDTextField.text!)!)
+                 client.tickets.append(ticket)
+                reservation.clients.append(client)
+            } else {
+                let alert = UIAlertController(title: "Failed", message: "Check above fields", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: .cancel))
+present(alert, animated: true, completion: nil)
+                
+            }
+            
+        }
+        
         performSegue(withIdentifier: "createClientSegue", sender: self)
     }
     
@@ -36,10 +55,12 @@ class RegisterViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "createClientSegue"){
             let ticketVC = segue.destination as! TicketViewController
-            
-            ticketVC.client = client
+            ticketVC.reservation = reservation
+            ticketVC.clientProfile = client
+        
         }
     }
+    
     
 
 }
