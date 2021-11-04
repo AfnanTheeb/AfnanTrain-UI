@@ -22,8 +22,10 @@ class TicketCellViewController: UIViewController, UITableViewDelegate , UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let ticketCell = UITableViewCell(style: .default, reuseIdentifier: nil)
+
+        
         ticketCell.textLabel?.text = " \(clientProfile.tickets[indexPath.row].ticketID) + from :\(clientProfile.tickets[indexPath.row].startStation) TO \(clientProfile.tickets[indexPath.row].endStation)"
-  
+        let customCell = tableView.dequeueReusableCell(withIdentifier: "numCell", for: indexPath) as! TicketCell
         return ticketCell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -44,7 +46,7 @@ class TicketCellViewController: UIViewController, UITableViewDelegate , UITableV
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        TableTickets.register(UINib(nibName: "TicketCell", bundle: nil), forCellReuseIdentifier: "numCell")
         
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
