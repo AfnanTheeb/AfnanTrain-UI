@@ -1,4 +1,4 @@
-# TRAIN PROGRAM ..
+# AfnanTrain iOS app
 ------------
 
 ####  Overview:
