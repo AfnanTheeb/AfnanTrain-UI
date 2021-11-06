@@ -31,11 +31,12 @@ class BookingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         typeSelected = 0
         toPicker.isHidden = true
         fromSelected = .Makkah
-        toSelected = .Jeddah
+        toSelected = .KAEC
         fromPicker.selectRow(0, inComponent: 0, animated: true)
-        toPicker.selectRow(1, inComponent: 0, animated: true)
-        ticket = issueTicketPrice(from: .Makkah, to: .Jeddah, ticketType: 0 )
+        toPicker.selectRow(0, inComponent: 0, animated: true)
+        ticket = issueTicketPrice()
         // Do any additional setup after loading the view.
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -69,7 +70,7 @@ class BookingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             
         } else {
             toSelected = Station(rawValue: toStations[row])
-
+            ticket.endStation = toSelected
         }
 //        updatePriceTicket()
         fromPicker.reloadAllComponents()
@@ -82,6 +83,7 @@ class BookingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBAction func onChange(_ sender: Any) {
         print (setmentClass.selectedSegmentIndex)
         typeSelected = setmentClass.selectedSegmentIndex
+        ticket.bookingType = BookingType(rawValue: typeSelected)!
 //        updatePriceTicket()
 
     }
@@ -91,10 +93,10 @@ class BookingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
 
     
-    func issueTicketPrice(from: Station = .Makkah, to: Station = .Jeddah, ticketType: Int = 0 ) -> Ticket {
-        let enumFromSelected : Station = from
-        let enumToSelected : Station =  to
-        let enumTicketType = BookingType(rawValue: ticketType)
+    func issueTicketPrice() -> Ticket {
+        let enumFromSelected : Station = fromSelected
+        let enumToSelected : Station =  toSelected
+        let enumTicketType = BookingType(rawValue: typeSelected)
         return Ticket(startStation: enumFromSelected, endStation: enumToSelected, cost: 40, bookingType: enumTicketType!)
     }
     
